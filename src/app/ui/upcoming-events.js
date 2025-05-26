@@ -18,9 +18,8 @@ export default function UpcomingEvents(){
         return (
             <div className="p-4 grid grid-cols-1 gap-6">
                     {events.map(({name, location, date, link}, index) => (
-                        <a href={link}>
+                        <a href={link} key={index}>
                             <div
-                            key={index}
                             className="bg-gray-400 shadow-md rounded-lg p-4 transition transform hover:scale-105 duration-200"
                             >
                             <h2 className="text-xl font-semibold mb-2 text-(--foreground)"> {name}</h2>
