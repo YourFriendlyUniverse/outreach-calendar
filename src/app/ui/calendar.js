@@ -34,7 +34,7 @@ export const events = [
 
 
 export default function Calendar() {
-    const daysOfWeek = ["S", "M", "T", "W", "T", "F", "S"]
+    const daysOfWeek = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"]
     const today = startOfToday()
     const [selectedDay, setSelectedDate] = useState(today)
 
@@ -44,12 +44,12 @@ export default function Calendar() {
                 <h1 className="font-bold">{monthFullName[getMonth(selectedDay)]}, {format(selectedDay, 'yyyy')}</h1>
                 <div className="flex items-center gap-3">
                 <GrFormPrevious
-                    className="size-5 cursor-pointer hover:bg-(--foreground)"
+                    className="size-5 cursor-pointer"
                     onClick={() => {
                     setSelectedDate(subMonths(selectedDay, 1))
                     }}
                 />
-                <h1 className="cursor-pointer">Today</h1>
+                <h1>Today</h1>
                 <GrFormNext
                     className="size-5 cursor-pointer gap-5"
                     onClick={() => {

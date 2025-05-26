@@ -20,7 +20,7 @@ export default function UpcomingEvents(){
                     {events.map(({name, location, date, link}, index) => (
                         <a href={link} key={index}>
                             <div
-                            className="bg-gray-400 shadow-md rounded-lg p-4 transition transform hover:scale-105 duration-200"
+                            className="bg-gray-500 shadow-md rounded-lg p-4 transition transform hover:scale-105 duration-200"
                             >
                             <h2 className="text-xl font-semibold mb-2 text-(--foreground)"> {name}</h2>
                             <p className="text-sm text-gray-200">📍 {location}</p>
